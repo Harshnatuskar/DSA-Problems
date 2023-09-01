@@ -1,4 +1,4 @@
-class Solution {
+class Solution {  //using map
 public:
     bool isAnagram(string s, string t) { 
         if(s.length()!=t.length()){return false;}
@@ -14,7 +14,7 @@ public:
         } 
         return true;
     }
-};
+}; 
 
 
 //alt answer
@@ -32,3 +32,24 @@ public:
         }
         return true;
     } */
+    
+
+//array and hashing
+/*class Solution { //3 ms run time
+public:
+    bool isAnagram(string s, string t) {
+        if(s.size()!=t.size()){
+            return false;
+        }
+        sort(s.begin(),s.end());
+        sort(t.begin(),t.end());
+        for(int i =0; i<s.size();i++){
+            if(s[i]!=t[i]){
+                return false;
+            }
+        }
+        return true;
+    }
+}; */
+
+
